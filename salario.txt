@@ -1,0 +1,27 @@
+salario = float(input("Escreva seu salário:"))
+dependentes = float(input("Escreva seu número de dependentes:"))
+pat = float(input("Escreva seu PAT:"))
+plano = float(input("Gastos com plano de saúde:"))
+descontos = float(input("Outros descontos:"))
+if salario < 1045:
+    inss = 7.5/100 * salario
+if 1045 < salario < 2089.6:
+    inss = 9/100 * salario
+if 2089.6 < salario < 3134.4:
+    inss = 12 / 100 * salario
+if 3134.4 <= salario < 6101.06:
+    inss = 14 / 100 * salario
+if salario > 6101.06:
+    inss = 671.12
+if salario < 1903.98:
+    irpf = 0.0
+if 1903.98 <= salario < 2826.65:
+    irpf = salario * 7.5 / 100 - 142.8
+if 2826.65 <= salario < 3751.05:
+    irpf = salario * 15 / 100 - 354.8
+if 3751.05 <= salario < 4664.68:
+    irpf = salario * 22.5 / 100 - 636.13
+if salario > 4664.68:
+    irpf = salario * 27.5 / 100 - 869.36
+salarioLiq = float(salario - (inss + irpf + dependentes + pat + plano + descontos))
+print("Seu salário líquido é:{}".format(salarioLiq))
