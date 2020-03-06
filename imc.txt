@@ -1,0 +1,23 @@
+import math
+peso = float(input("Escreva seu peso:"))
+altura = float(input("Escreva a sua altura em metros(ultilizando ponto):"))
+imc = peso / (altura * altura)
+print("Seu IMC é:{}".format(math.trunc(imc)))
+pesoIdeal = 24.9 * (altura * altura)
+if imc < 15:
+    print("Extremamente abaixo do peso!")
+if 15 < imc < 16:
+    print("Gravemente abaixo do peso")
+if 16 < imc < 18.5:
+    print("Abaixo do peso ideal")
+if 18.5 < imc < 25:
+    print("Faixa de peso ideal")
+if 25 < imc < 30:
+    print("Sobrepso")
+if 30 < imc < 35:
+    print("Obesidade grau I")
+if 35 < imc < 40:
+    print("Obesidade grau II(grave)")
+if imc > 40:
+    print("Obesidade grau III(mórbida)")
+print("Seu peso ideal é:{}".format(math.trunc(pesoIdeal)))
