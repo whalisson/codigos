@@ -110,7 +110,8 @@ public class JavaApplication1 {
         System.out.println("O fatorial de m é: "+x);
 
       }else {
-        for (int i = 1; i < m ; i++){
+            divEme = 1
+          for (int i = 1; i < m ; i++){
             if(m % i == 0){
                 divEme++;
             }
